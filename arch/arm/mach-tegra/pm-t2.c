@@ -68,7 +68,7 @@ struct pmc_scratch_field {
 		.shift_dst = (dst),					\
 	}
 
-static const struct pmc_scratch_field pllx[] __initdata = {
+static const struct pmc_scratch_field pllx[] = {
 	field(TEGRA_CLK_RESET_BASE + 0xe0, 20, 22, 15), /* PLLX_DIVP */
 	field(TEGRA_CLK_RESET_BASE + 0xe0, 8, 17, 5), /* PLLX_DIVN */
 	field(TEGRA_CLK_RESET_BASE + 0xe0, 0, 4, 0), /* PLLX_DIVM */
@@ -79,7 +79,7 @@ static const struct pmc_scratch_field pllx[] __initdata = {
 	field(TEGRA_APB_MISC_BASE + 0x8d0, 2, 2, 31), /* XM2CLKCFG_PREEMP_EN */
 };
 
-static const struct pmc_scratch_field emc_0[] __initdata = {
+static const struct pmc_scratch_field emc_0[] = {
 	field(TEGRA_EMC_BASE + 0x3c, 0, 4, 27), /* R2W */
 	field(TEGRA_EMC_BASE + 0x34, 0, 5, 15), /* RAS */
 	field(TEGRA_EMC_BASE + 0x2c, 0, 5, 0), /* RC */
@@ -87,7 +87,7 @@ static const struct pmc_scratch_field emc_0[] __initdata = {
 	field(TEGRA_EMC_BASE + 0x38, 0, 5, 21), /* RP */
 };
 
-static const struct pmc_scratch_field emc_1[] __initdata = {
+static const struct pmc_scratch_field emc_1[] = {
 	field(TEGRA_EMC_BASE + 0x44, 0, 4, 5), /* R2P */
 	field(TEGRA_EMC_BASE + 0x4c, 0, 5, 15), /* RD_RCD */
 	field(TEGRA_EMC_BASE + 0x54, 0, 3, 27), /* RRD */
@@ -96,7 +96,7 @@ static const struct pmc_scratch_field emc_1[] __initdata = {
 	field(TEGRA_EMC_BASE + 0x50, 0, 5, 21), /* WR_RCD */
 };
 
-static const struct pmc_scratch_field emc_2[] __initdata = {
+static const struct pmc_scratch_field emc_2[] = {
 	field(TEGRA_EMC_BASE + 0x2b8, 2, 2, 31), /* CLKCHANGE_SR_ENABLE */
 	field(TEGRA_EMC_BASE + 0x2b8, 10, 10, 30), /* USE_ADDR_CLK */
 	field(TEGRA_EMC_BASE + 0x80, 0, 4, 25), /* PCHG2PDEN */
@@ -108,7 +108,7 @@ static const struct pmc_scratch_field emc_2[] __initdata = {
 	field(TEGRA_EMC_BASE + 0x5c, 0, 3, 4), /* WDV */
 };
 
-static const struct pmc_scratch_field emc_3[] __initdata = {
+static const struct pmc_scratch_field emc_3[] = {
 	field(TEGRA_EMC_BASE + 0x74, 0, 3, 16), /* BURST_REFRESH_NUM */
 	field(TEGRA_EMC_BASE + 0x7c, 0, 3, 24), /* PDEX2RD */
 	field(TEGRA_EMC_BASE + 0x78, 0, 3, 20), /* PDEX2WR */
@@ -117,7 +117,7 @@ static const struct pmc_scratch_field emc_3[] __initdata = {
 	field(TEGRA_EMC_BASE + 0xa0, 0, 3, 28), /* TCLKSTABLE */
 };
 
-static const struct pmc_scratch_field emc_4[] __initdata = {
+static const struct pmc_scratch_field emc_4[] = {
 	field(TEGRA_EMC_BASE + 0x84, 0, 4, 0), /* ACT2PDEN */
 	field(TEGRA_EMC_BASE + 0x88, 0, 4, 5), /* AR2PDEN */
 	field(TEGRA_EMC_BASE + 0x8c, 0, 5, 10), /* RW2PDEN */
@@ -125,7 +125,7 @@ static const struct pmc_scratch_field emc_4[] __initdata = {
 	field(TEGRA_EMC_BASE + 0x90, 0, 11, 16), /* TXSR */
 };
 
-static const struct pmc_scratch_field emc_5[] __initdata = {
+static const struct pmc_scratch_field emc_5[] = {
 	field(TEGRA_EMC_BASE + 0x8, 10, 10, 30), /* AP_REQ_BUSY_CTRL */
 	field(TEGRA_EMC_BASE + 0x8, 24, 24, 31), /* CFG_PRIORITY */
 	field(TEGRA_EMC_BASE + 0x8, 2, 2, 26), /* FORCE_UPDATE */
@@ -139,7 +139,7 @@ static const struct pmc_scratch_field emc_5[] __initdata = {
 	field(TEGRA_EMC_BASE + 0x9c, 0, 5, 0), /* TRPAB */
 };
 
-static const struct pmc_scratch_field emc_6[] __initdata = {
+static const struct pmc_scratch_field emc_6[] = {
 	field(TEGRA_EMC_BASE + 0xfc, 0, 1, 0), /* DQSIB_DLY_MSB_BYTE_0 */
 	field(TEGRA_EMC_BASE + 0xfc, 8, 9, 2), /* DQSIB_DLY_MSB_BYTE_1 */
 	field(TEGRA_EMC_BASE + 0xfc, 16, 17, 4), /* DQSIB_DLY_MSB_BYTE_2 */
@@ -154,20 +154,20 @@ static const struct pmc_scratch_field emc_6[] __initdata = {
 	field(TEGRA_APB_MISC_BASE + 0x8e4, 16, 19, 26), /* XM2CFGC_VREF_DQS */
 };
 
-static const struct pmc_scratch_field emc_dqsib_dly[] __initdata = {
+static const struct pmc_scratch_field emc_dqsib_dly[] = {
 	field(TEGRA_EMC_BASE + 0xf8, 0, 31, 0), /* DQSIB_DLY_BYTE_0 - DQSIB_DLY_BYTE_3*/
 };
 
-static const struct pmc_scratch_field emc_quse_dly[] __initdata = {
+static const struct pmc_scratch_field emc_quse_dly[] = {
 	field(TEGRA_EMC_BASE + 0x10c, 0, 31, 0), /* QUSE_DLY_BYTE_0 - QUSE_DLY_BYTE_3*/
 };
 
-static const struct pmc_scratch_field emc_clktrim[] __initdata = {
+static const struct pmc_scratch_field emc_clktrim[] = {
 	field(TEGRA_EMC_BASE + 0x2d0, 0, 29, 0), /* DATA0_CLKTRIM - DATA3_CLKTRIM +
 					* MCLK_ADDR_CLKTRIM */
 };
 
-static const struct pmc_scratch_field emc_autocal_fbio[] __initdata = {
+static const struct pmc_scratch_field emc_autocal_fbio[] = {
 	field(TEGRA_EMC_BASE + 0x2a4, 29, 29, 29), /* AUTO_CAL_ENABLE */
 	field(TEGRA_EMC_BASE + 0x2a4, 30, 30, 30), /* AUTO_CAL_OVERRIDE */
 	field(TEGRA_EMC_BASE + 0x2a4, 8, 12, 14), /* AUTO_CAL_PD_OFFSET */
@@ -182,14 +182,14 @@ static const struct pmc_scratch_field emc_autocal_fbio[] __initdata = {
 	field(TEGRA_EMC_BASE + 0x114, 0, 2, 1), /* CFG_QUSE_LATE */
 };
 
-static const struct pmc_scratch_field emc_autocal_interval[] __initdata = {
+static const struct pmc_scratch_field emc_autocal_interval[] = {
 	field(TEGRA_EMC_BASE + 0x2a8, 0, 27, 0), /* AUTOCAL_INTERVAL */
 	field(TEGRA_EMC_BASE + 0x2b8, 1, 1, 29), /* CLKCHANGE_PD_ENABLE */
 	field(TEGRA_EMC_BASE + 0x2b8, 0, 0, 28), /* CLKCHANGE_REQ_ENABLE */
 	field(TEGRA_EMC_BASE + 0x2b8, 8, 9, 30), /* PIN_CONFIG */
 };
 
-static const struct pmc_scratch_field emc_cfgs[] __initdata = {
+static const struct pmc_scratch_field emc_cfgs[] = {
 	field(TEGRA_EMC_BASE + 0x10, 8, 9, 3), /* EMEM_BANKWIDTH */
 	field(TEGRA_EMC_BASE + 0x10, 0, 2, 0), /* EMEM_COLWIDTH */
 	field(TEGRA_EMC_BASE + 0x10, 16, 19, 5), /* EMEM_DEVSIZE */
@@ -208,7 +208,7 @@ static const struct pmc_scratch_field emc_cfgs[] __initdata = {
 	field(TEGRA_MC_BASE + 0x10c, 1, 1, 27), /* LL_SEND_BOTH */
 };
 
-static const struct pmc_scratch_field emc_adr_cfg1[] __initdata = {
+static const struct pmc_scratch_field emc_adr_cfg1[] = {
 	field(TEGRA_EMC_BASE + 0x14, 8, 9, 8), /* EMEM1_BANKWIDTH */
 	field(TEGRA_EMC_BASE + 0x14, 0, 2, 5), /* EMEM1_COLWIDTH */
 	field(TEGRA_EMC_BASE + 0x14, 16, 19, 10), /* EMEM1_DEVSIZE */
@@ -222,7 +222,7 @@ static const struct pmc_scratch_field emc_adr_cfg1[] __initdata = {
 	field(TEGRA_APB_MISC_BASE + 0x8d8, 8, 10, 27), /* XM2VTTGEN_VCLAMP_LEVEL */
 };
 
-static const struct pmc_scratch_field emc_digital_dll[] __initdata = {
+static const struct pmc_scratch_field emc_digital_dll[] = {
 	field(TEGRA_EMC_BASE + 0x2bc, 1, 1, 23), /* DLI_TRIMMER_EN */
 	field(TEGRA_EMC_BASE + 0x2bc, 0, 0, 22), /* DLL_EN */
 	field(TEGRA_EMC_BASE + 0x2bc, 5, 5, 27), /* DLL_LOWSPEED */
@@ -233,26 +233,26 @@ static const struct pmc_scratch_field emc_digital_dll[] __initdata = {
 	field(TEGRA_MC_BASE + 0xc, 0, 21, 0), /* EMEM_SIZE_KB */
 };
 
-static const struct pmc_scratch_field emc_dqs_clktrim[] __initdata = {
+static const struct pmc_scratch_field emc_dqs_clktrim[] = {
 	field(TEGRA_EMC_BASE + 0x2d4, 0, 29, 0), /* DQS0_CLKTRIM - DQS3 + MCLK*/
 	field(TEGRA_APB_MISC_BASE + 0x8e4, 3, 3, 31), /* XM2CFGC_CTT_HIZ_EN */
 	field(TEGRA_APB_MISC_BASE + 0x8e4, 4, 4, 30), /* XM2CFGC_VREF_DQS_EN */
 };
 
-static const struct pmc_scratch_field emc_dq_clktrim[] __initdata = {
+static const struct pmc_scratch_field emc_dq_clktrim[] = {
 	field(TEGRA_EMC_BASE + 0x2d8, 0, 29, 0),
 	field(TEGRA_APB_MISC_BASE + 0x8e4, 2, 2, 30), /* XM2CFGC_PREEMP_EN */
 	field(TEGRA_APB_MISC_BASE + 0x8e4, 0, 0, 31), /* XM2CFGC_RX_FT_REC_EN */
 };
 
-static const struct pmc_scratch_field emc_dll_xform_dqs[] __initdata = {
+static const struct pmc_scratch_field emc_dll_xform_dqs[] = {
 	field(TEGRA_EMC_BASE + 0x2bc, 16, 25, 20), /* CFG_DLL_OVERRIDE_VAL */
 	field(TEGRA_EMC_BASE + 0x2c0, 0, 4, 0), /* DQS_MULT */
 	field(TEGRA_EMC_BASE + 0x2c0, 8, 22, 5), /* DQS_OFFS */
 	field(TEGRA_MC_BASE + 0x10c, 31, 31, 30), /* LL_DRAM_INTERLEAVE */
 };
 
-static const struct pmc_scratch_field emc_odt_rw[] __initdata = {
+static const struct pmc_scratch_field emc_odt_rw[] = {
 	field(TEGRA_EMC_BASE + 0x2c4, 0, 4, 0), /* QUSE_MULT */
 	field(TEGRA_EMC_BASE + 0x2c4, 8, 22, 5), /* QUSE_OFF */
 	field(TEGRA_EMC_BASE + 0xb4, 31, 31, 29), /* DISABLE_ODT_DURING_READ */
@@ -263,16 +263,16 @@ static const struct pmc_scratch_field emc_odt_rw[] __initdata = {
 	field(TEGRA_EMC_BASE + 0xb0, 0, 2, 20), /* WR_DELAY */
 };
 
-static const struct pmc_scratch_field arbitration_xbar[] __initdata = {
+static const struct pmc_scratch_field arbitration_xbar[] = {
 	field(TEGRA_AHB_GIZMO_BASE + 0xdc, 0, 31, 0),
 };
 
-static const struct pmc_scratch_field emc_zcal[] __initdata = {
+static const struct pmc_scratch_field emc_zcal[] = {
 	field(TEGRA_EMC_BASE + 0x2e0, 0, 23, 0), /* ZCAL_REF_INTERVAL */
 	field(TEGRA_EMC_BASE + 0x2e4, 0, 7, 24), /* ZCAL_WAIT_CNT */
 };
 
-static const struct pmc_scratch_field emc_ctt_term[] __initdata = {
+static const struct pmc_scratch_field emc_ctt_term[] = {
 	field(TEGRA_EMC_BASE + 0x2dc, 15, 19, 26), /* TERM_DRVDN */
 	field(TEGRA_EMC_BASE + 0x2dc, 8, 12, 21), /* TERM_OFFSET */
 	field(TEGRA_EMC_BASE + 0x2dc, 31, 31, 31), /* TERM_OVERRIDE */
@@ -281,7 +281,7 @@ static const struct pmc_scratch_field emc_ctt_term[] __initdata = {
 	field(TEGRA_EMC_BASE + 0x2e8, 0, 7, 0), /* ZQ_MRW_OP */
 };
 
-static const struct pmc_scratch_field xm2_cfgd[] __initdata = {
+static const struct pmc_scratch_field xm2_cfgd[] = {
 	field(TEGRA_APB_MISC_BASE + 0x8e8, 16, 18, 9), /* CFGD0_DLYIN_TRM */
 	field(TEGRA_APB_MISC_BASE + 0x8e8, 20, 22, 6), /* CFGD1_DLYIN_TRM */
 	field(TEGRA_APB_MISC_BASE + 0x8e8, 24, 26, 3), /* CFGD2_DLYIN_TRM */
