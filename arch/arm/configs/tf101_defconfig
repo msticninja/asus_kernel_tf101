@@ -1,7 +1,11 @@
 #
 # Automatically generated make config: don't edit
 # Linux/arm 2.6.39.4 Kernel Configuration
+<<<<<<< HEAD
 # Thu Mar 29 01:55:41 2012
+=======
+# Sun Mar 25 13:03:53 2012
+>>>>>>> 1e4e48e... Use EOS nightly 17 defconfig for EOS wifi, remove __initdata references
 #
 CONFIG_ARM=y
 CONFIG_HAVE_PWM=y
@@ -179,8 +183,13 @@ CONFIG_LBDAF=y
 # IO Schedulers
 #
 CONFIG_IOSCHED_NOOP=y
+<<<<<<< HEAD
 # CONFIG_IOSCHED_DEADLINE is not set
 # CONFIG_IOSCHED_CFQ is not set
+=======
+CONFIG_IOSCHED_DEADLINE=y
+CONFIG_IOSCHED_CFQ=y
+>>>>>>> 1e4e48e... Use EOS nightly 17 defconfig for EOS wifi, remove __initdata references
 # CONFIG_DEFAULT_DEADLINE is not set
 # CONFIG_DEFAULT_CFQ is not set
 CONFIG_DEFAULT_NOOP=y
@@ -877,10 +886,6 @@ CONFIG_BT_BLUESLEEP=y
 # CONFIG_AF_RXRPC is not set
 CONFIG_FIB_RULES=y
 CONFIG_WIRELESS=y
-CONFIG_WIRELESS_EXT=y
-CONFIG_WEXT_CORE=y
-CONFIG_WEXT_PROC=y
-CONFIG_WEXT_PRIV=y
 CONFIG_CFG80211=y
 # CONFIG_NL80211_TESTMODE is not set
 # CONFIG_CFG80211_DEVELOPER_WARNINGS is not set
@@ -888,8 +893,12 @@ CONFIG_CFG80211=y
 CONFIG_CFG80211_DEFAULT_PS=y
 # CONFIG_CFG80211_DEBUGFS is not set
 # CONFIG_CFG80211_INTERNAL_REGDB is not set
+<<<<<<< HEAD
 CONFIG_CFG80211_WEXT=y
 CONFIG_WIRELESS_EXT_SYSFS=y
+=======
+# CONFIG_CFG80211_WEXT is not set
+>>>>>>> 1e4e48e... Use EOS nightly 17 defconfig for EOS wifi, remove __initdata references
 # CONFIG_LIB80211 is not set
 # CONFIG_CFG80211_ALLOW_RECONNECT is not set
 # CONFIG_MAC80211 is not set
@@ -1166,6 +1175,7 @@ CONFIG_WLAN=y
 # CONFIG_USB_ZD1201 is not set
 # CONFIG_USB_NET_RNDIS_WLAN is not set
 # CONFIG_ATH_COMMON is not set
+<<<<<<< HEAD
 # CONFIG_B43LEGACY_DMA_AND_PIO_MODE is not set
 # CONFIG_B43LEGACY_DMA_MODE is not set
 # CONFIG_B43LEGACY_PIO_MODE is not set
@@ -1182,14 +1192,18 @@ CONFIG_BCMDHD=m
 CONFIG_BCMDHD_FW_DIR="/system/vendor/firmware"
 CONFIG_BCMDHD_NVRAM_DIR="/system/etc"
 CONFIG_BCMDHD_NVRAM_PATH="/system/etc/nvram.txt"
+=======
+# CONFIG_BCM4329 is not set
+CONFIG_BCMDHD=y
+CONFIG_BCMDHD_FW_DIR="/vendor/firmware"
+CONFIG_BCMDHD_NVRAM_DIR="/data/misc/wifi"
+>>>>>>> 1e4e48e... Use EOS nightly 17 defconfig for EOS wifi, remove __initdata references
 CONFIG_BCMDHD_WIFI_CONTROL_FUNC=y
 # CONFIG_BCMDHD_HW_OOB is not set
 # CONFIG_HOSTAP is not set
 # CONFIG_IPW2100 is not set
-# CONFIG_IPW2200 is not set
 # CONFIG_IWM is not set
 # CONFIG_LIBERTAS is not set
-# CONFIG_HERMES is not set
 
 #
 # Enable WiMAX (Networking options) to see the WiMAX drivers
@@ -1262,7 +1276,7 @@ CONFIG_SLHC=y
 # Input device support
 #
 CONFIG_INPUT=y
-# CONFIG_INPUT_FF_MEMLESS is not set
+CONFIG_INPUT_FF_MEMLESS=y
 # CONFIG_INPUT_POLLDEV is not set
 # CONFIG_INPUT_SPARSEKMAP is not set
 
@@ -2634,7 +2648,13 @@ CONFIG_FAT_FS=y
 CONFIG_VFAT_FS=y
 CONFIG_FAT_DEFAULT_CODEPAGE=437
 CONFIG_FAT_DEFAULT_IOCHARSET="iso8859-1"
+<<<<<<< HEAD
 # CONFIG_NTFS_FS is not set
+=======
+CONFIG_NTFS_FS=y
+# CONFIG_NTFS_DEBUG is not set
+# CONFIG_NTFS_RW is not set
+>>>>>>> 1e4e48e... Use EOS nightly 17 defconfig for EOS wifi, remove __initdata references
 
 #
 # Pseudo filesystems
@@ -2690,9 +2710,15 @@ CONFIG_CIFS=m
 # CONFIG_CIFS_WEAK_PW_HASH is not set
 CONFIG_CIFS_XATTR=y
 CONFIG_CIFS_POSIX=y
+<<<<<<< HEAD
 # CONFIG_CIFS_DEBUG2 is not set
 # CONFIG_CIFS_ACL is not set
 # CONFIG_CIFS_EXPERIMENTAL is not set
+=======
+CONFIG_CIFS_DEBUG2=y
+# CONFIG_CIFS_ACL is not set
+CONFIG_CIFS_EXPERIMENTAL=y
+>>>>>>> 1e4e48e... Use EOS nightly 17 defconfig for EOS wifi, remove __initdata references
 # CONFIG_NCP_FS is not set
 # CONFIG_CODA_FS is not set
 # CONFIG_AFS_FS is not set
@@ -2931,7 +2957,11 @@ CONFIG_CRYPTO_HMAC=y
 #
 CONFIG_CRYPTO_CRC32C=y
 # CONFIG_CRYPTO_GHASH is not set
+<<<<<<< HEAD
 CONFIG_CRYPTO_MD4=m
+=======
+CONFIG_CRYPTO_MD4=y
+>>>>>>> 1e4e48e... Use EOS nightly 17 defconfig for EOS wifi, remove __initdata references
 CONFIG_CRYPTO_MD5=y
 # CONFIG_CRYPTO_MICHAEL_MIC is not set
 # CONFIG_CRYPTO_RMD128 is not set
